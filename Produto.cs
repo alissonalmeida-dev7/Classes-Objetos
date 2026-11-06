@@ -15,5 +15,31 @@ namespace ClassesObjetos
         {
             Console.WriteLine($"{Nome} - {Preco:C}");
         }
+
+        public void AlternarPreco(decimal novoPreco)
+        {
+            if(novoPreco > 0)
+            {
+                Preco = novoPreco;
+            }
+            else
+            {
+                Console.WriteLine("Valor não permitido.");
+            }
+        }
+
+        public Produto() // O metodo construtor sempre terá o mesmo nome da classe.
+        {
+            Nome = "Não informado";
+            Preco = 0;
+        }
+
+        public Produto(string nome, decimal valor)
+        {
+            Nome = nome;
+            Preco = valor;
+        }
+
+
     }
 }
